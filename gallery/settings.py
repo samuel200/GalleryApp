@@ -58,11 +58,7 @@ ROOT_URLCONF = 'gallery.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            # os.path.join(os.path.realpath(BASE_DIR), 'templates'),
-            # "C:\\Users\\Samuel Emeh\\Desktop\\galleryApp\\gallery\\gallery\\templates"
-            'gallery/templates',
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
