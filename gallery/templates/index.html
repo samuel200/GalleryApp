@@ -1,0 +1,43 @@
+{% extends 'showcase/header.html' %}
+
+{% block content %}
+	<div class='top'>
+		{% include 'navigation.html' %}
+		<div class="cover">
+			<div id="cover-inner">
+				<h1>welcome to galleria.</h1>
+				<div id="button-section">
+					<a href="{% url 'account:signup' %}" class="hover-btn">sign up</a>
+					<a href="{% url 'account:signin' %}" class="hover-btn">sign in</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='bottom'>
+		<div class="title">
+			<h2>recent posts</h2>
+		</div>
+		<div class="post-showcase">
+				{% if post_size > 0 %}
+					{% for post in posts %}
+					<div class="card">
+						<div class="image-holder">
+							<img src="{{post.image.url}}" alt="post-image" />
+							<div class="cover">
+								<a href="{% url 'gallery:post_details' title=post.title %}" class="hover-btn">see more</a>
+							</div>
+						</div>
+						<p>{{post.shorten}}</p>
+
+						<p class='author_info'>Posted by {{ post.author }}<p>
+					</div>
+					{% endfor%}
+				{% else %}
+					<p id="empty-message"> No Posts </p>
+				{% endif%}
+		</div>
+	</div>
+	<footer>
+		<a href="mailto:samuelemeh200@gmail.com">Copyright&copy; Samuel Emeh</a>
+	</footer>
+{% endblock %}

@@ -1,0 +1,259 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	font-family: Helvetica;
+	font-size: 16px;
+}
+
+.clear:before{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+div.top{
+	max-height: 500px;
+	background-size: cover;
+	background-image: url(../img/home_background.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px -200px;
+	color: white;
+	overflow: hidden;
+}
+
+div#head-area{
+	font-size: 1.3em;
+	padding: 0px 20px;
+}
+div#head-area h1{
+	width: 50%;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	font-family: cursive;
+}
+
+div#head-area nav ul{
+	width: 50%;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	top: 20px;
+	position: relative;
+	list-style: none;
+	text-transform: capitalize;
+	text-align: right;
+}
+
+div#head-area nav ul li{
+	display: inline-block;
+	margin-left: 20px;
+}
+
+div#head-area nav ul li a,
+div#head-area nav ul li a:link,
+div#head-area nav ul li a:visited{
+	color: white;
+	text-decoration: none;
+	transition: .5;
+}
+
+div#head-area nav ul li a:hover{
+	color: #8B008B;
+}
+
+div.cover:before{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+div.cover{
+	background-color: rgba(0, 0, 0, .7);
+	font-weight: normal;
+}
+.hover-btn{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: transparent;
+	border: 3px solid white;
+	border-radius: 10px;
+	color: white;
+	transition: .5s background;
+	transition: .5s border-color;
+}
+.hover-btn:hover{
+	color: #8B008B;
+	border-color: #8B008B;
+	background: rgba(0, 0, 0, .4);
+	box-shadow: 10px 10px 20px #9400D3 outset;
+}
+
+div.top div.cover{
+		min-height: 600px;
+}
+div#cover-inner{
+	width: 50%;
+	margin: 0px auto;
+	font-size: 1.5em;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+div#cover-inner a{
+	width: 30%;
+	height: 50px;
+	font-size: 1.1em;
+	padding-top: 25px;
+	margin-left: 20px;
+	display: inline-block;
+	overflow-y: hidden;
+	text-decoration: none;
+}
+
+div#button-section{
+	margin: 0px auto;
+}
+
+div.bottom{
+	padding: 10px 5px;
+}
+div.title{
+	color: white;
+	width: inherit;
+	text-align: left;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	background: #8B008B;
+	border-radius: 20px;
+}
+
+div.post-showcase{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div.card{
+	width: 22%;
+	height: 400px;
+	margin-left: 20px;
+	background-color: rgb(235, 235, 235);
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 2px 2px 10px rgb(40, 40, 40);
+}
+
+div.card p{
+	padding: 10px;
+	font-size: 1.05em;
+	color: rgb(130, 130, 130);
+}
+
+div.card div.image-holder{
+	width: 100%;
+	max-height: 40%;
+	margin: 0px auto 30px auto;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+div.card div.image-holder img{
+	width: inherit;
+}
+
+div.card div.image-holder div.cover{
+	width: 100%;
+	height: 100%;
+	transition: 1s opacity;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+}
+
+div.card div.image-holder div.cover a{
+	text-decoration: none;
+	padding: 10px;
+	border-width: 1px;
+  position: absolute;
+	transition: .5s ease-in bottom;
+	bottom: -15px;
+	left: 33%;
+}
+
+div.card div.image-holder:hover div.cover{
+	opacity: 1;
+}
+
+div.card div.image-holder:hover div.cover a{
+	bottom: 25%;
+}
+
+.author_info{
+	display: inline-block;
+	margin-left: 40%;
+}
+footer{
+	color: white;
+	background: black;
+	padding: 50px 0px;
+	margin-top: 50px;
+	text-align: center;
+}
+footer a{
+	color: white;
+	text-decoration: none;
+}
+
+.site-form{
+	width: 80%;
+	margin: 50px auto;
+	border-radius: 5px;
+	border: 2px solid #8B008B;
+	padding: 20px;
+}
+
+.site-form input{
+	display: block;
+	padding: 10px;
+	width: 40%;
+	margin: 20px 0px;
+	box-sizing: border-box;
+}
+
+.site-form input[type=submit]{
+	padding: 10px;
+	color: white;
+	font-size: 1.1em;
+	margin-top: 0;
+	background-color: #8B008B;
+	border: none;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transition: .5s background;
+}
+
+.site-form input[type=submit]:hover{
+	color: #8B008B;
+	background: inherit;
+	border: 1px solid #8B008B;
+}
+
+.errorlist{
+	list-style: none;
+	padding: none;
+}
+
+.errorlist li{
+	display: inline-block;
+	padding: 5px;
+	border-radius: 10px;
+	border: 1px solid red;
+	color: red;
+	font-size: 1.1em;
+}
+.helptext{
+	display: none;
+}

@@ -1,0 +1,19 @@
+body{
+  background: rgb(120, 120, 120);
+}
+div.post-description{
+  text-align: left;
+}
+div.post-description img{
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+  max-height: 350px;
+}
+
+div.post-description p{
+  line-height: 25px;
+  padding: 25px;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,42 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Gallery mode</title>
+
+	<link rel="stylesheet" href="{% static 'home/gallery/style.css'%}">
+
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="feature">
+			<figure class="featured-item image-holder r-3-2 transition"></figure>
+		</div>
+
+		<div class="gallery-wrapper">
+				<div class="gallery">
+					{% for post in posts %}
+						<div class="item-wrapper">
+							<figure class="gallery-item image-holder r-3-2 active transition">
+								<img src="{{ post.image.url }}" alt="post-images">
+							</figure>
+						</div>
+					{% endfor %}
+				</div>
+
+		<div class="controls">
+			<button class="move-btn left">&larr;</button>
+			<button class="move-btn right">&rarr;</button>
+		</div>
+
+	</div>
+
+	<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>

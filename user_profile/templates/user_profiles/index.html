@@ -1,0 +1,12 @@
+{% extends 'showcase/header.html' %}
+
+{% block content %}
+  {% include 'navigation.html' %}
+  <div class="clear">
+    <form class="site-form " action="{% url 'profile:index' %}" method="post">
+      {% csrf_token %}
+      {{ post_fields }}
+      <input type="submit" value="submit">
+    </form>
+  </div>
+{% endblock %}

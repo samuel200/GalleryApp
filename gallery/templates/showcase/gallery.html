@@ -1,0 +1,8 @@
+{% extends 'showcase/header.html' %}
+
+{% block content %}
+  <form action="{% url 'account:signout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" name="signout" value="signout">
+  </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'showcase/header.html'%}
+
+{% block content %}
+  {% include 'navigation.html' %}
+  <div class='post-description'>
+    <img src="{{ post.image.url }}" alt="post-image"/>
+    <p>{{post.description}}</p>
+  </div>
+{% endblock %}
